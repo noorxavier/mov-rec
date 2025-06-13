@@ -4,11 +4,17 @@ import pandas as pd
 import requests
 
 #pkl file retrieving from Gdrive
-import gdown
+import os
+import requests
 
-url = 'https://drive.google.com/file/d/1yRhsdOjz6yVkmGe6RiAjVh4FFUXIlM8r'
-output = 'similarity.pkl'
-gdown.download(url, output, quiet=False)
+def download_file(url, output_path):
+    response = requests.get(url)
+    with open(output_path, 'wb') as f:
+        f.write(response.content)
+
+if not os.path.exists("similarity.pkl"):
+    url ="https://github.com/noorxavier/mov-rec/releases/tag/v1.0"
+    download_file(url, "similarity.pkl")
 
 
 # Fetch poster using TMDB API
