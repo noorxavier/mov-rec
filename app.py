@@ -13,8 +13,9 @@ def download_file(url, output_path):
         f.write(response.content)
 
 if not os.path.exists("similarity.pkl"):
-    url ="https://github.com/noorxavier/mov-rec/releases/tag/v1.0"
+    url = "https://github.com/noorxavier/mov-rec/releases/download/v1.0/similarity.pkl"
     download_file(url, "similarity.pkl")
+
 
 
 # Fetch poster using TMDB API
