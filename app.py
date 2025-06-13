@@ -6,13 +6,9 @@ import requests
 #pkl file retrieving from Gdrive
 import gdown
 
-import os
-
-# Only download if not already present
-if not os.path.exists("similarity.pkl"):
-    url = 'https://drive.google.com/uc?id=1yRhsdOjz6yVkmGe6RiAjVh4FFUXIlM8r'
-    output = 'similarity.pkl'
-    gdown.download(url, output, quiet=False)
+url = 'https://drive.google.com/file/d/1yRhsdOjz6yVkmGe6RiAjVh4FFUXIlM8r'
+output = 'similarity.pkl'
+gdown.download(url, output, quiet=False)
 
 
 # Fetch poster using TMDB API
