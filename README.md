@@ -2,11 +2,6 @@
 
 A **Content-Based Movie Recommendation System** built with Python and Streamlit that recommends movies similar to a user's selected movie using precomputed similarity scores. Movie posters are dynamically fetched from the **TMDB API**.
 
-## 🚀 Live Project
-
-**GitHub Repository:**
-https://github.com/noorxavier/mov-rec
-
 ---
 
 ## 📌 Overview
